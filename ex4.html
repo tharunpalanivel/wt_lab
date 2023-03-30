@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <title>simple calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="calculator.css">
+
+</head>
+
+<body>
+    <div class="container mt-3" style="background-color: antiquewhite;">
+        <div class="row ">
+            <div class="col">
+               <h1 style="text-align: center;"> Simple calculator</h1>
+            </div>
+        </div>
+        </div>
+        <div class="container" style="background-color: bisque;">
+        <div class="row mt-3">
+            <div class="col" style="margin-left: 500px; margin-top: 200px; "><input type="text" id="num1"></div>
+
+        </div>
+        <div class="row  mt-2">
+            <div class="col" style="margin-left: 500px;">
+                <select id="operators">
+                    <option value="+" ><h4>+</h4></option>
+                    <option value="-"><h4>-</h4>-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col " style="margin-left: 500px;">
+                <input type="text" id="num2">
+            </div>
+        </div>
+
+
+
+        <div class="row  mt-2">
+            <div class="col" style="margin-left: 500px;">
+                <button onclick="calc()">=</button><br>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col" style="margin-left: 500px; margin-bottom: 200px;">
+                <input type="text" id="ans">
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        function calc() {
+            var a, b, c;
+            a = Number(document.getElementById('num1').value);
+            b = Number(document.getElementById('num2').value);
+            c = document.getElementById('operators').value;
+            if (c === '+') {
+                x = document.getElementById('ans').value = (a + b);
+            }
+            if (c === '-') {
+                x = document.getElementById('ans').value = (a - b);
+            }
+            if (c === '*') {
+                x = document.getElementById('ans').value = (a * b);
+            }
+            if (c === '/') {
+                x = document.getElementById('ans').value = (a / b);
+            }
+        }
+    </script>
+</body>
+
+</html>
